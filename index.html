@@ -13,9 +13,9 @@
         logThumbstick: function (evt) {
             var box = document.createElement('a-box');
                 box.setAttribute('position', `${evt.detail.x} ${evt.detail.y} ${evt.detail.z}`);
-                box.setAttribute('radius', "1");
+                box.setAttribute('radius', "0.5");
                 box.setAttribute('color', '$EF2D5E');
-                document.body.appendChild(box);
+                document.getElementsByTagName('a-scene')[0].appendChild(box);
         }
         });
     </script>
