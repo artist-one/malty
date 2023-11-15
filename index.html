@@ -11,11 +11,13 @@
             this.el.addEventListener('thumbstickdown', this.logThumbstick);
         },
         logThumbstick: function (evt) {
-            var box = document.createElement('a-box');
-                box.setAttribute('position', `${evt.detail.x} ${evt.detail.y} ${evt.detail.z}`);
-                box.setAttribute('radius', "0.5");
-                box.setAttribute('color', '$EF2D5E');
-                document.getElementsByTagName('a-scene')[0].appendChild(box);
+            var box = document.createElement('a-cylinder');
+            box.setAttribute('position', `${evt.detail.x} ${evt.detail.y} ${evt.detail.z}`);
+            box.setAttribute('radius', "0.25");
+            box.setAttribute('color', '$EF2D5E');
+            box.setAttribute('height', '0.5');
+            document.getElementsByTagName('a-scene')[0].appendChild(box);
+            console.log('done');
         }
         });
     </script>
